@@ -9,7 +9,7 @@
 """
 from scrapy.item import Field, Item
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import Join, MapCompose, TakeFirst
+from itemloaders.processors import Join, MapCompose, TakeFirst
 
 
 class Item(Item):
