@@ -9,17 +9,17 @@ class MyCrawler(RedisCrawlSpider):
     name = "mycrawler_redis"
     redis_key = "mycrawler:start_urls"
     # 允许爬取的域名
-    allowed_domains = ["example.com"]
+    allowed_domains = ["bilibili.com"]
 
     """ 爬取规则 """
     rules = (
         Rule(
             LinkExtractor(
-                allow=(r"/articles/", r"/news/"),    # 只允许匹配 `/articles/` 或 `/news/` 的链接
-                deny=(r"/login/", r"/private/")      # 拒绝包含 `/login/` 或 `/private/` 的链接
+                restrict_css=".channel-items__left .channel-link",
+                allow=r"/anime|/movie|/guochuang|/tv|/variety|/documentary|/v"
             ),
-            callback="parse_page",   # 回调函数
-            follow=True              # 跟踪此规则提取的链接
+            callback="parse_page",
+            follow=True
         ),
     )
 
@@ -30,8 +30,8 @@ class MyCrawler(RedisCrawlSpider):
         loader = ItemLoader(item=Item(), response=response)
         
         # 提取字段（自动应用 processors）
-        loader.add_css("name", "title::text")          # 从 CSS 选择器提取标题
-        loader.add_value("url", response.url)          # 直接添加当前 URL
+        loader.add_css("name", "h1::text")          # 从 CSS 选择器提取标题
+        loader.add_value("channel-link", response.url)          # 直接添加当前 URL
         loader.add_css(
             "description", 
             "meta[name='description']::attr(content)", # 提取 meta 描述
