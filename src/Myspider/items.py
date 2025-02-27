@@ -10,18 +10,21 @@
 from scrapy.item import Field, Item
 from scrapy.loader import ItemLoader
 from itemloaders.processors import Join, MapCompose, TakeFirst
+from w3lib.html import remove_tags
 
+class PageLinkItem(Item):
+    url = Field(output_processor=TakeFirst())     # 网页链接
+    crawled = Field(output_processor=TakeFirst()) # 爬取时间
+    spider = Field(output_processor=TakeFirst())  # 爬虫名称
 
-class Item(Item):
-    name = Field()
-    description = Field()
-    crawled = Field()
-    spider = Field()
-    url = Field()
+class ImageItem(Item):
+    image_urls = Field(
+        input_processor=MapCompose(remove_tags, str.strip)
+    )
+    images = Field()
+    page_url = Field(output_processor=TakeFirst())
 
-
-class ItemLoader(ItemLoader):
-    default_item_class = Item
-    default_input_processor = MapCompose(lambda s: s.strip())
+class CustomItemLoader(ItemLoader):
+    default_input_processor = MapCompose(str.strip)
     default_output_processor = TakeFirst()
     description_out = Join()
