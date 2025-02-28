@@ -1,0 +1,123 @@
+2025-02-28 20:03:57 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+2025-02-28 20:03:57 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.26100-SP0
+2025-02-28 20:03:57 [image_downloader] INFO: Reading start URLs from redis key 'image_pages:start_urls' (batch size: 32, encoding: utf-8)
+2025-02-28 20:03:57 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-02-28 20:03:58 [scrapy.extensions.telnet] INFO: Telnet Password: 7e2620978e1cc15c
+2025-02-28 20:03:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.spiderstate.SpiderState',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-02-28 20:03:58 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'CONCURRENT_REQUESTS': 32,
+ 'DOWNLOAD_DELAY': 1,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'JOBDIR': './jobs/consumer_4',
+ 'LOG_FILE': './logs/consumer_4.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'Myspider.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['Myspider.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'}
+2025-02-28 20:03:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-02-28 20:03:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-02-28 20:03:59 [py.warnings] WARNING: C:\Users\31933\anaconda3\envs\Spider\lib\site-packages\scrapy\middleware.py:88: ScrapyDeprecationWarning: LinkPipeline has from_settings() but not from_crawler(). This is deprecated and calling from_settings() will be removed in a future Scrapy version. You can implement a simple from_crawler() that calls from_settings() with crawler.settings.
+  mw = build_from_crawler(mwcls, crawler)
+
+2025-02-28 20:03:59 [scrapy.middleware] WARNING: Disabled Myspider.pipelines.ImagePipeline: ImagesPipeline requires installing Pillow 4.0.0 or later
+2025-02-28 20:03:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['Myspider.pipelines.LinkPipeline']
+2025-02-28 20:03:59 [scrapy.core.engine] INFO: Spider opened
+2025-02-28 20:04:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-02-28 20:04:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2025-02-28 20:04:10 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-02-28 20:04:10 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-02-28 20:04:10 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 9.579225,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2025, 2, 28, 12, 4, 10, 682998, tzinfo=datetime.timezone.utc),
+ 'items_per_minute': None,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'responses_per_minute': None,
+ 'start_time': datetime.datetime(2025, 2, 28, 12, 4, 1, 103773, tzinfo=datetime.timezone.utc)}
+2025-02-28 20:04:10 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2025-02-28 20:25:15 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+2025-02-28 20:25:15 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.26100-SP0
+2025-02-28 20:25:15 [image_downloader] INFO: Reading start URLs from redis key 'image_pages:start_urls' (batch size: 32, encoding: utf-8)
+2025-02-28 20:25:15 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-02-28 20:25:16 [scrapy.extensions.telnet] INFO: Telnet Password: 8109d372ddcf37e9
+2025-02-28 20:25:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.spiderstate.SpiderState',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-02-28 20:25:16 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'CONCURRENT_REQUESTS': 32,
+ 'DOWNLOAD_DELAY': 1,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'JOBDIR': './jobs/consumer_4',
+ 'LOG_FILE': './logs/consumer_4.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'Myspider.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['Myspider.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'}
+2025-02-28 20:25:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-02-28 20:25:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-02-28 20:25:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['Myspider.pipelines.LinkPipeline', 'Myspider.pipelines.ImagePipeline']
+2025-02-28 20:25:17 [scrapy.core.engine] INFO: Spider opened
+2025-02-28 20:25:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-02-28 20:25:19 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+2025-02-28 20:25:48 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-02-28 20:25:48 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-02-28 20:25:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 29.103466,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2025, 2, 28, 12, 25, 48, 527597, tzinfo=datetime.timezone.utc),
+ 'items_per_minute': None,
+ 'log_count/INFO': 11,
+ 'responses_per_minute': None,
+ 'start_time': datetime.datetime(2025, 2, 28, 12, 25, 19, 424131, tzinfo=datetime.timezone.utc)}
+2025-02-28 20:25:48 [scrapy.core.engine] INFO: Spider closed (shutdown)

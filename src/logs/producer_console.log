@@ -4,3 +4,4 @@ nohup: failed to run command 'python': No such file or directory
 /usr/bin/python3: No module named scrapy
 /usr/bin/python3: No module named scrapy
 nohup: failed to run command 'scrapy': No such file or directory
+nohup: failed to run command 'scrapy': No such file or directory

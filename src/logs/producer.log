@@ -1,0 +1,200 @@
+2025-02-28 20:03:57 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+2025-02-28 20:03:57 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.26100-SP0
+2025-02-28 20:03:57 [link_collector] INFO: Reading start URLs from redis key 'link_collector:start_urls' (batch size: 32, encoding: utf-8)
+2025-02-28 20:03:57 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-02-28 20:03:58 [scrapy.extensions.telnet] INFO: Telnet Password: 3adfdfce77959a8c
+2025-02-28 20:03:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.spiderstate.SpiderState',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-02-28 20:03:58 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'CONCURRENT_REQUESTS': 32,
+ 'DOWNLOAD_DELAY': 1,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'JOBDIR': './jobs/producer',
+ 'LOG_FILE': './logs/producer.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'Myspider.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['Myspider.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'}
+2025-02-28 20:03:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-02-28 20:03:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-02-28 20:03:59 [py.warnings] WARNING: C:\Users\31933\anaconda3\envs\Spider\lib\site-packages\scrapy\middleware.py:88: ScrapyDeprecationWarning: LinkPipeline has from_settings() but not from_crawler(). This is deprecated and calling from_settings() will be removed in a future Scrapy version. You can implement a simple from_crawler() that calls from_settings() with crawler.settings.
+  mw = build_from_crawler(mwcls, crawler)
+
+2025-02-28 20:03:59 [scrapy.middleware] WARNING: Disabled Myspider.pipelines.ImagePipeline: ImagesPipeline requires installing Pillow 4.0.0 or later
+2025-02-28 20:03:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['Myspider.pipelines.LinkPipeline']
+2025-02-28 20:03:59 [scrapy.core.engine] INFO: Spider opened
+2025-02-28 20:04:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-02-28 20:04:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+2025-02-28 20:04:03 [link_collector] WARNING: [93mWARNING: String request is deprecated, please use JSON data format. Detail information, please check https://github.com/rmax/scrapy-redis#features[0m
+2025-02-28 20:04:03 [link_collector] WARNING: [93mWARNING: String request is deprecated, please use JSON data format. Detail information, please check https://github.com/rmax/scrapy-redis#features[0m
+2025-02-28 20:04:03 [link_collector] WARNING: [93mWARNING: String request is deprecated, please use JSON data format. Detail information, please check https://github.com/rmax/scrapy-redis#features[0m
+2025-02-28 20:04:11 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-02-28 20:04:11 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-02-28 20:04:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 11753,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 625861,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 18,
+ 'downloader/response_status_count/301': 11,
+ 'elapsed_time_seconds': 43.979469,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2025, 2, 28, 12, 4, 45, 97594, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 3253160,
+ 'httpcompression/response_count': 18,
+ 'item_scraped_count': 15,
+ 'items_per_minute': None,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 5,
+ 'request_depth_max': 2,
+ 'response_received_count': 18,
+ 'responses_per_minute': None,
+ 'scheduler/dequeued/redis': 29,
+ 'scheduler/enqueued/redis': 40,
+ 'start_time': datetime.datetime(2025, 2, 28, 12, 4, 1, 118125, tzinfo=datetime.timezone.utc)}
+2025-02-28 20:04:45 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2025-02-28 20:25:15 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+2025-02-28 20:25:15 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.26100-SP0
+2025-02-28 20:25:15 [link_collector] INFO: Reading start URLs from redis key 'link_collector:start_urls' (batch size: 32, encoding: utf-8)
+2025-02-28 20:25:15 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-02-28 20:25:15 [scrapy.extensions.telnet] INFO: Telnet Password: 9b672bcc3f7755fe
+2025-02-28 20:25:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.spiderstate.SpiderState',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-02-28 20:25:15 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'CONCURRENT_REQUESTS': 32,
+ 'DOWNLOAD_DELAY': 1,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'JOBDIR': './jobs/producer',
+ 'LOG_FILE': './logs/producer.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'Myspider.spiders',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['Myspider.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'}
+2025-02-28 20:25:16 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-02-28 20:25:16 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-02-28 20:25:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['Myspider.pipelines.LinkPipeline', 'Myspider.pipelines.ImagePipeline']
+2025-02-28 20:25:17 [scrapy.core.engine] INFO: Spider opened
+2025-02-28 20:25:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-02-28 20:25:19 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2025-02-28 20:25:21 [link_collector] WARNING: [93mWARNING: String request is deprecated, please use JSON data format. Detail information, please check https://github.com/rmax/scrapy-redis#features[0m
+2025-02-28 20:25:23 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:21.859816',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/car/'}
+2025-02-28 20:25:26 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:26.329428',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/food/'}
+2025-02-28 20:25:27 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:27.988574',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/life/'}
+2025-02-28 20:25:32 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:32.449366',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/music/'}
+2025-02-28 20:25:34 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:34.592516',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/sports/'}
+2025-02-28 20:25:36 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:36.042995',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/fashion/'}
+2025-02-28 20:25:37 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:37.450123',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/animal/'}
+2025-02-28 20:25:38 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:38.933683',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/cinephile/'}
+2025-02-28 20:25:40 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:40.285400',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/virtual/'}
+2025-02-28 20:25:41 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:41.323313',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/life/funny/'}
+2025-02-28 20:25:42 [scrapy.core.scraper] WARNING: Dropped: 无有效图片
+{'crawled': '2025-02-28T12:25:42.216892',
+ 'spider': 'link_collector',
+ 'url': 'https://www.bilibili.com/v/game/stand_alone/'}
+2025-02-28 20:25:48 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-02-28 20:25:48 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-02-28 20:25:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 4011,
+ 'downloader/request_count': 12,
+ 'downloader/request_method_count/GET': 12,
+ 'downloader/response_bytes': 286198,
+ 'downloader/response_count': 12,
+ 'downloader/response_status_count/200': 12,
+ 'elapsed_time_seconds': 29.177496,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2025, 2, 28, 12, 25, 48, 589723, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1464762,
+ 'httpcompression/response_count': 12,
+ 'item_dropped_count': 11,
+ 'item_dropped_reasons_count/DropItem': 11,
+ 'items_per_minute': None,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 12,
+ 'request_depth_max': 2,
+ 'response_received_count': 12,
+ 'responses_per_minute': None,
+ 'scheduler/dequeued/redis': 12,
+ 'scheduler/enqueued/redis': 1,
+ 'start_time': datetime.datetime(2025, 2, 28, 12, 25, 19, 412227, tzinfo=datetime.timezone.utc)}
+2025-02-28 20:25:48 [scrapy.core.engine] INFO: Spider closed (shutdown)

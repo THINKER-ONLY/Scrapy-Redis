@@ -26,6 +26,10 @@ class LinkPipeline:
         self.queue_key = "image_pages:start_urls"
         
     @classmethod
+    def from_crawler(cls, crawler):
+        return cls.from_settings(crawler.settings)
+
+    @classmethod
     def from_settings(cls, settings):
         redis_conn = redis.Redis(
             host=settings.get("REDIS_HOST", "localhost"),
